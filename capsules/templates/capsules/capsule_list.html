@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+
+{% comment %}
+<!--
+    Time capsule list template
+    
+    Displays a grid of all time capsules owned by the current user:
+    - Create new capsule button
+    - Card for each capsule showing:
+        * Title and description
+        * Status badge (Active/Locked/Unlocked)
+        * Unlock date with countdown
+        * Action buttons (View/Edit/Delete)
+    - Delete confirmation modals
+    - Empty state message when no capsules exist
+    
+    Context variables required:
+    - capsules: QuerySet of TimeCapsule instances
+-->
+{% endcomment %}
+
+{% block title %}My capsules{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1>My time capsules</h1>
+        <a href="{% url 'capsules:capsule_create' %}" class="btn btn-primary">
+            <i class="bi bi-plus-circle"></i> Create new capsule
+        </a>
+    </div>
+
+    {% if capsules %}
+    <div class="row">
+        {% for capsule in capsules %}
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">{{ capsule.title }}</h5>
+                    <p class="card-text">{{ capsule.description|truncatewords:30 }}</p>
+                    <p class="text-muted">
+                        Status: 
+                        {% if capsule.status == 'locked' %}
+                            <span class="badge bg-danger">Locked</span>
+                        {% elif capsule.status == 'unlocked' %}
+                            <span class="badge bg-success">Unlocked</span>
+                        {% else %}
+                            <span class="badge bg-primary">Active</span>
+                        {% endif %}
+                    </p>
+                    {% if capsule.unlock_date %}
+                    <p class="text-muted">Unlocks on: {{ capsule.unlock_date|date:"F j, Y \a\t g:i A" }}</p>
+                    {% endif %}
+                </div>
+                <div class="card-footer bg-transparent">
+                    <div class="d-flex gap-2">
+                        <a href="{% url 'capsules:capsule_detail' pk=capsule.pk %}" class="btn btn-primary btn-sm">
+                            <i class="bi bi-eye"></i> View
+                        </a>
+                        {% if not capsule.is_locked %}
+                        <a href="{% url 'capsules:capsule_edit' pk=capsule.pk %}" class="btn btn-outline-primary btn-sm">
+                            <i class="bi bi-pencil"></i> Edit
+                        </a>
+                        {% endif %}
+                        <button type="button" class="btn btn-outline-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteCapsuleModal{{ capsule.pk }}">
+                            <i class="bi bi-trash"></i> Delete
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Delete confirmation modal for each capsule -->
+        <div class="modal fade" id="deleteCapsuleModal{{ capsule.pk }}" tabindex="-1" aria-labelledby="deleteCapsuleModalLabel{{ capsule.pk }}" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="deleteCapsuleModalLabel{{ capsule.pk }}">Delete time capsule</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Are you sure you want to delete "<strong>{{ capsule.title }}</strong>"?</p>
+                        <p class="text-muted mb-0">This action cannot be undone.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                        <form method="post" action="{% url 'capsules:capsule_delete' pk=capsule.pk %}" class="d-inline">
+                            {% csrf_token %}
+                            <button type="submit" class="btn btn-danger">Delete</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% else %}
+    <div class="alert alert-info">
+        <p class="mb-0">You haven't created any time capsules yet. 
+        <a href="{% url 'capsules:capsule_create' %}" class="alert-link">Create your first capsule</a>!</p>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}
