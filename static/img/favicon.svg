@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <title>Everpast Time Capsule</title>
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M16,2 C19.3137085,2 22,4.6862915 22,8 C22,11.3137085 19.3137085,14 16,14 C12.6862915,14 10,11.3137085 10,8 C10,4.6862915 12.6862915,2 16,2 Z M16,18 C19.3137085,18 22,20.6862915 22,24 C22,27.3137085 19.3137085,30 16,30 C12.6862915,30 10,27.3137085 10,24 C10,20.6862915 12.6862915,18 16,18 Z" fill="#4A90E2"/>
+        <path d="M16,14 L16,18 M10,8 L22,24 M22,8 L10,24" stroke="#4A90E2" stroke-width="2"/>
+    </g>
+</svg>
