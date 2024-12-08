@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% comment %}
+<!--
+    Email Confirmation Template
+    
+    This template is shown when users need to verify their email:
+    - After registration
+    - When changing email addresses
+    
+    Features:
+    - Extends base template for consistent styling
+    - Bootstrap card layout
+    - Clear instructions
+    - Responsive design
+-->
+{% endcomment %}
+
+{% load i18n %}
+{% load account %}
+
+{% block title %}{% trans "Verify your email address" %}{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h2 class="card-title text-center mb-4">{% trans "Verify your email address" %}</h2>
+
+                    {% if confirmation %}
+                        <p class="text-center text-muted mb-4">
+                            {% blocktrans with confirmation.email_address.email as email %}Please confirm that <a href="mailto:{{ email }}">{{ email }}</a> is your email address.{% endblocktrans %}
+                        </p>
+
+                        <form method="post" action="{% url 'account_confirm_email' confirmation.key %}">
+                            {% csrf_token %}
+                            <div class="d-grid gap-2">
+                                <button class="btn btn-primary" type="submit">{% trans "Confirm" %}</button>
+                            </div>
+                        </form>
+                    {% else %}
+                        <div class="alert alert-info" role="alert">
+                            <i class="bi bi-envelope me-2"></i>
+                            {% url 'account_email' as email_url %}
+                            <p class="mb-0">{% blocktrans %}We have sent an email to verify your address. Please check your inbox and spam folder. If you did not receive it, you can <a href="{{ email_url }}" class="alert-link">request a new verification email</a>.{% endblocktrans %}</p>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
