@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% comment %}
+<!--
+    Logged out success template
+    
+    This template shows a success message after logout:
+    - Displays a success icon
+    - Shows a friendly goodbye message
+    - Provides options to sign in again or go home
+    - Uses Bootstrap for responsive design
+    
+    Features:
+    - Bootstrap icons for visual feedback
+    - Responsive card layout
+    - Clear call-to-action buttons
+-->
+{% endcomment %}
+
+{% block title %}Signed Out{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body text-center">
+                    <i class="bi bi-check-circle text-success" style="font-size: 3rem;"></i>
+                    <h1 class="card-title mt-3">Successfully signed out</h1>
+                    <p class="lead">Thank you for using Digital Time Capsule!</p>
+                    <div class="mt-4">
+                        <a href="{% url 'account_login' %}" class="btn btn-primary">Sign In Again</a>
+                        <a href="{% url 'capsules:home' %}" class="btn btn-outline-secondary ms-2">Back to Home</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
