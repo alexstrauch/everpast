@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% comment %}
+<!--
+    Logout confirmation template
+    
+    This template provides a confirmation page before logging out:
+    - Displays a friendly confirmation message
+    - Shows a Bootstrap icon for visual feedback
+    - Provides cancel and confirm buttons
+    - Handles redirect after logout
+    
+    Context Variables:
+    - redirect_field_name: Name of redirect field
+    - redirect_field_value: Value to redirect to after logout
+-->
+{% endcomment %}
+
+{% load crispy_forms_tags %}
+
+{% block title %}Sign out{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body text-center">
+                    <i class="bi bi-box-arrow-right text-primary" style="font-size: 3rem;"></i>
+                    <h1 class="card-title mt-3">Sign out</h1>
+                    <p class="lead">Are you sure you want to sign out?</p>
+                    <form method="post" action="{% url 'account_logout' %}">
+                        {% csrf_token %}
+                        {% if redirect_field_value %}
+                        <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
+                        {% endif %}
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+                            <a href="{% url 'capsules:home' %}" class="btn btn-outline-secondary me-md-2">Cancel</a>
+                            <button type="submit" class="btn btn-primary">Sign out</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
