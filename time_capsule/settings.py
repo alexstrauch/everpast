@@ -18,7 +18,7 @@ from pathlib import Path
 import os
 from dotenv import load_dotenv
 import dj_database_url
-import django_heroku
+
 
 # Load environment variables from .env file
 load_dotenv()
@@ -227,4 +227,4 @@ LOGOUT_REDIRECT_URL = 'home'
 LOGIN_URL = 'account_login'
 
 # Configure Django App for Heroku
-django_heroku.settings(locals())
+
