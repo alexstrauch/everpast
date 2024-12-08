@@ -1,0 +1,110 @@
+{% extends 'base.html' %}
+
+{% comment %}
+<!--
+    Time capsule content form template
+    
+    Form for adding or editing content in a time capsule:
+    - File upload with preview for images
+    - Title and description fields
+    - Content type selection
+    - Form validation
+    - Progress feedback during upload
+    - Cancel and submit buttons
+    
+    Context variables required:
+    - capsule: TimeCapsule instance being edited
+    - content: Content instance if editing (optional)
+    - form: ContentForm instance
+-->
+{% endcomment %}
+
+{% load crispy_forms_tags %}
+
+{% block title %}Add content to {{ capsule.title }}{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-body">
+                    <h1 class="card-title h3 mb-4">
+                        {% if content %}
+                            Edit content
+                        {% else %}
+                            Add content to {{ capsule.title }}
+                        {% endif %}
+                    </h1>
+                    
+                    <form method="post" enctype="multipart/form-data" id="content-form">
+                        {% csrf_token %}
+                        {{ form|crispy }}
+                        
+                        <div id="preview" class="preview-container file-preview d-none">
+                            <h5 class="text-center mb-3">File preview</h5>
+                            <img id="image-preview" src="" alt="Preview" class="d-none">
+                            <div id="file-info" class="text-center text-muted"></div>
+                        </div>
+                        
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end mt-4">
+                            <a href="{% url 'capsules:capsule_detail' pk=capsule.pk %}" class="btn btn-secondary me-md-2">Cancel</a>
+                            <button type="submit" class="btn btn-primary">
+                                {% if content %}
+                                    Save changes
+                                {% else %}
+                                    Add content
+                                {% endif %}
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+document.getElementById('id_file').addEventListener('change', function(e) {
+    const file = e.target.files[0];
+    const preview = document.getElementById('preview');
+    const imagePreview = document.getElementById('image-preview');
+    const fileInfo = document.getElementById('file-info');
+    
+    if (file) {
+        preview.classList.remove('d-none');
+        fileInfo.textContent = `${file.name} (${(file.size / 1024).toFixed(2)} KB)`;
+        
+        if (file.type.startsWith('image/')) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                imagePreview.src = e.target.result;
+                imagePreview.classList.remove('d-none');
+            };
+            reader.readAsDataURL(file);
+        } else {
+            imagePreview.classList.add('d-none');
+        }
+    } else {
+        preview.classList.add('d-none');
+        imagePreview.classList.add('d-none');
+        fileInfo.textContent = '';
+    }
+});
+</script>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('content-form');
+    const submitBtn = document.querySelector('button[type="submit"]');
+
+    form.addEventListener('submit', function() {
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>' + 
+            (submitBtn.textContent === 'Save Changes' ? 'Saving...' : 'Uploading...');
+    });
+});
+</script>
+{% endblock %}
