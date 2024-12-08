@@ -1,0 +1,26 @@
+# Core framework
+Django==4.2.7  # Main web framework
+python-dotenv==1.0.0  # Environment variable management
+
+# Frontend & forms
+django-crispy-forms==2.1  # Form rendering
+crispy-bootstrap5==0.7  # Bootstrap 5 template pack for crispy-forms
+django-bootstrap5==23.3  # Bootstrap 5 template tags
+django-allauth==0.58.2  # Authentication and social auth
+
+# Testing & development
+coverage==7.3.2  # Code coverage tool
+
+# Media & file handling
+pillow==10.1.0  # Python Imaging Library for image processing
+cloudinary==1.36.0  # Cloud storage for media files
+django-cloudinary-storage==0.3.0  # Django storage backend for Cloudinary
+
+# Email
+sendgrid-django==4.2.0  # SendGrid integration for Django
+
+# Production & deployment
+gunicorn==21.2.0  # WSGI HTTP Server
+dj-database-url==2.1.0  # Database URL config parser
+psycopg2-binary==2.9.9  # PostgreSQL adapter
+whitenoise==6.6.0  # Static file serving
