@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% comment %}
+<!--
+    Email verification sent template
+    
+    This template is shown after a user requests email verification:
+    - After registration
+    - When changing email addresses
+    
+    Features:
+    - Extends base template for consistent styling
+    - Bootstrap card layout
+    - Clear instructions about next steps
+    - Responsive design
+-->
+{% endcomment %}
+
+{% load i18n %}
+
+{% block title %}{% trans "Verify your email address" %}{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h2 class="card-title text-center mb-4">{% trans "Verify your email address" %}</h2>
+                    
+                    <div class="alert alert-info" role="alert">
+                        <i class="bi bi-envelope me-2"></i>
+                        {% blocktrans %}We have sent an email to verify your address. Please check your inbox and spam folder. If you do not receive it in a few minutes, please contact us.{% endblocktrans %}
+                    </div>
+
+                    <div class="text-center mt-4">
+                        <a href="{% url 'account_email' %}" class="btn btn-outline-primary">
+                            <i class="bi bi-gear me-2"></i>{% trans "Email settings" %}
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
