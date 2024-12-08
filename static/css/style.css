@@ -1,0 +1,194 @@
+/**
+ * Everpast time capsule - Main stylesheet
+ * 
+ * This stylesheet provides custom styling for the Everpast application:
+ * - Layout and spacing
+ * - Navigation and footer
+ * - Card animations and hover effects
+ * - Status indicators and badges
+ * - Content previews and media displays
+ * - Responsive design adjustments
+ * - Custom animations and transitions
+ */
+
+/* Layout and structure
+   ------------------- */
+   html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    margin-bottom: 2rem;
+}
+
+/* Navigation components
+   ------------------- */
+.navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1030;
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+/* Message notifications
+   ------------------- */
+.messages-container {
+    margin-top: 4.5rem;
+}
+
+/* Main content area
+   --------------- */
+main {
+    margin-top: 56px; /* Height of the navbar */
+    padding: 1rem 0;
+}
+
+/* Card components
+   ------------- */
+.card {
+    transition: transform 0.2s;
+    box-shadow: 0 4px 6px rgba(0,0,0,.1);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Time capsule styles */
+.capsule-card {
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.capsule-card .card-header {
+    background-color: #343a40;
+    color: white;
+}
+
+.capsule-status {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.8em;
+}
+
+.status-active {
+    background-color: #28a745;
+    color: white;
+}
+
+.status-locked {
+    background-color: #dc3545;
+    color: white;
+}
+
+.status-unlocked {
+    background-color: #17a2b8;
+    color: white;
+}
+
+/* Form styles */
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+}
+
+/* Custom file input */
+.custom-file-input::-webkit-file-upload-button {
+    visibility: hidden;
+}
+
+.custom-file-input::before {
+    content: 'Select files';
+    display: inline-block;
+    background: linear-gradient(to bottom, #f8f9fa 0%, #e9ecef 100%);
+    border: 1px solid #ced4da;
+    border-radius: 3px;
+    padding: 5px 8px;
+    outline: none;
+    white-space: nowrap;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 10pt;
+}
+
+/* Countdown timer */
+.countdown {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #343a40;
+}
+
+/* Footer styles */
+.footer {
+    background-color: #343a40 !important;
+    color: #fff !important;
+    margin-top: auto;
+}
+
+.social-icons a {
+    font-size: 1.5rem;
+    transition: opacity 0.2s;
+}
+
+.social-icons a:hover {
+    opacity: 0.8;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .form-container {
+        margin: 10px;
+    }
+    
+    .capsule-card {
+        margin-bottom: 20px;
+    }
+}
+
+/* Animations */
+@keyframes unlock-animation {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.unlocked-animation {
+    animation: unlock-animation 0.5s ease-in-out;
+}
+
+/* Accessibility */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* Focus styles */
+a:focus, button:focus {
+    outline: 3px solid #007bff;
+    outline-offset: 2px;
+}
