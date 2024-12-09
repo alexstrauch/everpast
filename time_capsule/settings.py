@@ -221,9 +221,10 @@ ACCOUNT_EMAIL_CONFIRMATION_EXPIRE_DAYS = 1
 ACCOUNT_LOGIN_ATTEMPTS_LIMIT = 5
 ACCOUNT_LOGIN_ATTEMPTS_TIMEOUT = 300
 
-# Authentication settings
-LOGIN_REDIRECT_URL = 'home'
-LOGOUT_REDIRECT_URL = 'home'
+# Admin configuration
+ADMIN_URL = 'admin/'
+LOGOUT_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = '/'
 LOGIN_URL = 'account_login'
 
 # Configure Django App for Heroku
