@@ -145,6 +145,10 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
+            'builtins': [
+                'crispy_forms.templatetags.crispy_forms_tags',
+                'crispy_forms.templatetags.crispy_forms_field',
+            ],
         },
     },
 ]
@@ -224,7 +228,7 @@ CRISPY_TEMPLATE_PACK = "bootstrap5"
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Form rendering defaults
-FORM_RENDERER = 'django.forms.renderers.TemplatesSetting'
+FORM_RENDERER = 'django.forms.renderers.DjangoDivFormRenderer'
 
 # Email Configuration
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
