@@ -113,6 +113,7 @@ INSTALLED_APPS = [
     'cloudinary_storage',  
     'cloudinary',  
     # Local apps
+    'users.apps.UsersConfig',
     'capsules.apps.CapsulesConfig',
 ]
 
@@ -219,6 +220,9 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Crispy Forms
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 CRISPY_TEMPLATE_PACK = "bootstrap5"
+
+# Form rendering defaults
+FORM_RENDERER = 'django.forms.renderers.TemplatesSetting'
 
 # Email Configuration
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
