@@ -193,11 +193,10 @@ CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 # Email Configuration
-EMAIL_BACKEND = os.getenv('EMAIL_BACKEND', 'django.core.mail.backends.smtp.EmailBackend')
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 SENDGRID_API_KEY = os.getenv('SENDGRID_API_KEY')
 DEFAULT_FROM_EMAIL = os.getenv('DEFAULT_FROM_EMAIL', 'everpast.ci@gmail.com')
 SERVER_EMAIL = DEFAULT_FROM_EMAIL
-SENDGRID_SANDBOX_MODE_IN_DEBUG = False
 
 # Additional SendGrid Settings
 EMAIL_HOST = 'smtp.sendgrid.net'
