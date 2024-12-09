@@ -229,5 +229,6 @@ LOGIN_URL = 'account_login'
 # Admin configuration
 ADMIN_URL = 'admin/'
 ADMIN_LOGIN_URL = None
+ADMIN_LOGOUT_REDIRECT_URL = '/'
 
 
