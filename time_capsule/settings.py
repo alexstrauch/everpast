@@ -136,7 +136,6 @@ TEMPLATES = [
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
             os.path.join(BASE_DIR, 'templates'),
-            os.path.join(BASE_DIR, 'venv/lib/python3.11/site-packages/django/forms/templates'),
         ],
         'APP_DIRS': True,
         'OPTIONS': {
