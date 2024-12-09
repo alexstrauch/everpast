@@ -223,6 +223,11 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # Crispy Forms
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 CRISPY_TEMPLATE_PACK = "bootstrap5"
+CRISPY_CLASS_CONVERTERS = {
+    'textinput': "form-control",
+    'passwordinput': "form-control",
+    'emailinput': "form-control",
+}
 
 # Default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
@@ -265,8 +270,8 @@ AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
     'allauth.account.auth_backends.AuthenticationBackend',
 )
-LOGOUT_REDIRECT_URL = 'home'
-LOGIN_REDIRECT_URL = 'home'
+LOGOUT_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = '/'
 LOGIN_URL = 'account_login'
 
 # Admin configuration
