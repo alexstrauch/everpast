@@ -222,6 +222,10 @@ ACCOUNT_LOGIN_ATTEMPTS_TIMEOUT = 300
 
 
 # Authentication settings
+AUTHENTICATION_BACKENDS = (
+    'django.contrib.auth.backends.ModelBackend',
+    'allauth.account.auth_backends.AuthenticationBackend',
+)
 LOGOUT_REDIRECT_URL = 'home'
 LOGIN_REDIRECT_URL = 'home'
 LOGIN_URL = 'account_login'
