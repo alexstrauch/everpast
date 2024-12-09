@@ -64,6 +64,34 @@ if not DEBUG:
     # Content security policy
     SECURE_REFERRER_POLICY = 'same-origin'
 
+# Logging configuration
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'verbose': {
+            'format': '{levelname} {asctime} {module} {process:d} {thread:d} {message}',
+            'style': '{',
+        },
+    },
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+            'formatter': 'verbose',
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['console'],
+            'level': 'DEBUG',
+        },
+        'allauth': {
+            'handlers': ['console'],
+            'level': 'DEBUG',
+        },
+    },
+}
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -197,6 +225,7 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 SENDGRID_API_KEY = os.getenv('SENDGRID_API_KEY')
 DEFAULT_FROM_EMAIL = os.getenv('DEFAULT_FROM_EMAIL', 'everpast.ci@gmail.com')
 SERVER_EMAIL = DEFAULT_FROM_EMAIL
+EMAIL_DEBUG = True
 
 # Additional SendGrid Settings
 EMAIL_HOST = 'smtp.sendgrid.net'
