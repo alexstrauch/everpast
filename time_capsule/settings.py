@@ -227,5 +227,3 @@ LOGOUT_REDIRECT_URL = '/'
 LOGIN_REDIRECT_URL = '/'
 LOGIN_URL = 'account_login'
 
-# Configure Django App for Heroku
-
