@@ -319,7 +319,10 @@
 
 ## Languages
 
-- 
+- Python 3.11
+- HTML5
+- CSS3
+- JavaScript
 
 [Back to table of contents](#table-of-contents)
 
@@ -327,23 +330,18 @@
 
 - 
 
-- 
-
-- 
-
-- 
-
-- 
-
-- 
-
 [Back to table of contents](#table-of-contents)
 
 ## Libraries
 
-- 
-
-- 
+- Django 4.2
+- Bootstrap 5
+- jQuery
+- Crispy Forms
+- Django Allauth
+- Cloudinary
+- WhiteNoise
+- Gunicorn
 
 [Back to table of contents](#table-of-contents)
 
