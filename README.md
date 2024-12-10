@@ -33,8 +33,9 @@
    - [Python validation](#python-validation)
 11. [Bugs](#bugs)
 12. [Deployment](#deployment)
-13. [Credits](#credits)
-14. [Acknowledgements](#acknowledgements)
+13. [Forking](#forking)
+14. [Credits](#credits)
+15. [Acknowledgements](#acknowledgements)
 
 ## Introduction
 
@@ -438,6 +439,114 @@
 [Back to table of contents](#table-of-contents)
 
 ## Deployment
+
+I deployed this Django application on Heroku, taking advantage of its integration with GitHub. Here's a step-by-step overview of my deployment process:
+
+1. **Heroku app creation**:
+   I accessed my Heroku dashboard, navigated to “New,” and selected “Create new app.” Then, I picked a unique name for the app and chose the correct region.
+
+2. **GitHub integration**:
+   On the app’s “Deploy” tab, I chose GitHub as the deployment method. I linked my GitHub account and selected the repository with my Django app.
+
+3. **Environment configuration**:
+   In the "Settings" tab, I clicked on "Reveal Config Vars" and added the necessary environment variables:
+
+- `CLOUDINARY_API_KEY`: My Cloudinary API key
+- `CLOUDINARY_API_SECRET`: My Cloudinary API secret
+- `CLOUDINARY_CLOUD_NAME`: My Cloudinary cloud name
+- `DATABASE_URL`: The URL provided by Code Institute for the database
+- `DEBUG`: set to False
+- `DEFAULT_FROM_EMAIL`: My default email address used with SendGrid
+- `EMAIL_BACKEND`: My email backend service
+- `SECRET_KEY`: My Django secret key
+- `SENDGRID_API_KEY`: My SendGrid API key
+
+4. **Database configuration**:
+   Since my database is supplied by Code Institute, I verified that the `DATABASE_URL` in Config Vars was correctly configured with the provided database URL. In my Django settings, I ensured this environment variable was used to set up the database connection.
+
+5. **Buildpack configuration**:
+   In the “Settings” tab, I navigated to the “Buildpacks” section, clicked “Add buildpack,” and chose “heroku/python.”
+
+6. **Deployment configuration**:
+   On the “Deploy” tab, under “Deployment method,” I verified that GitHub was chosen. In the “App connected to GitHub” section, I made sure my repository was linked.
+
+7. **Manual deploy**:
+   I scrolled down to the “Manual deploy” section, selected the main branch, and clicked “Deploy Branch.”
+
+8. **Verify deployment**:
+   After the deployment was complete, I clicked “View” to open the app and confirm it was functioning properly.
+
+[Go to Table of Contents](#table-of-contents)
+
+## Forking
+
+If you'd like to fork this repository and run it locally, follow these steps:
+
+1. **Fork the repository**:
+   - Navigate to the GitHub repository: [Everpast](https://github.com/alexstrauch/everpast)
+   - In the top-right corner of the page, click the "Fork" button.
+   - This will create a copy of the repository in your GitHub account.
+
+2. **Clone your fork**:
+   - On your forked repository page, click the "Code" button and copy the URL.
+   - Open your terminal and run:
+     ```
+     git clone [URL you just copied]
+     ```
+   - This creates a local copy of the repository on your machine.
+
+3. **Set up virtual environment**:
+   - Navigate into the project directory:
+     ```
+     cd [project directory name]
+     ```
+   - Create a virtual environment:
+     ```
+     python -m venv venv
+     ```
+   - Activate the virtual environment:
+     - On Windows: `venv\Scripts\activate`
+     - On macOS and Linux: `source venv/bin/activate`
+
+4. **Install dependencies**:
+   - With your virtual environment activated, install the required packages:
+     ```
+     pip install -r requirements.txt
+     ```
+
+5. **Set up environment variables**:
+   - Create a `env.py` file in the root directory of the project.
+   - Add the following variables (replace with your actual values):
+     ```
+     SECRET_KEY=your_secret_key
+     DATABASE_URL=your_database_url
+     CLOUDINARY_API_KEY=your_cloudinary_api_key
+     CLOUDINARY_API_SECRET=your_cloudinary_api_secret
+     CLOUDINARY_CLOUD_NAME=your_cloudinary_cloud_name
+     DEFAULT_FROM_EMAIL=your_email_address
+     EMAIL_BACKEND=your_email_backend_service
+     SENDGRID_API_KEY=your_sendgrid_api_key
+     DEBUG=True
+     ```
+
+    
+    Important notes: 
+    - Make sure to set `DEBUG=True` for local development and testing in `env.py`.
+    - Remember to never commit the `env.py` file or any sensitive information to version control. If you plan to deploy your fork, make sure to set up the necessary environment variables in your deployment environment.
+
+6. **Apply Migrations**:
+   - Run the following commands to apply database migrations:
+     ```
+     python manage.py makemigrations
+     python manage.py migrate
+     ```
+
+7. **Run the development server**:
+   - Start the Django development server:
+     ```
+     python manage.py runserver
+     ```
+   - Open a web browser and navigate to `http://127.0.0.1:8000/` to view the application.
 
 
 [Back to table of contents](#table-of-contents)
