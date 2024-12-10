@@ -1,6 +1,6 @@
 # Everpast
 
-## Delicious recipes, just a click away!
+## Preserve your memories
 
 ![Command line image](docs/responsive.png)
 
@@ -44,7 +44,13 @@
 
 ### Purpose
 
-- 
+- Memory preservation: Users can securely store personal memories, photos, videos and documents in digital time capsules.
+
+- Future communication: Enable users to send messages, letters or media to their future selves or loved ones, accessible only after a predetermined date.
+
+- Legacy creation: Provide a platform for users to create meaningful digital legacies that can be shared with future generations.
+
+- Emotional connection: Bridge temporal gaps by allowing people to connect with their past selves and share meaningful moments across time.
 
 [Back to table of contents](#table-of-contents)
 
