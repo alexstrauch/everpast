@@ -445,7 +445,7 @@ erDiagram
 <details>
 <summary>Validation with CI Python Linter (click me)</summary>
 
-<img src="">
+<img src="docs/python-validation.png">
 </details>
 
 [Back to table of contents](#table-of-contents)
