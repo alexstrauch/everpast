@@ -2,7 +2,7 @@
 
 ## Preserve your memories
 
-![Command line image](docs/responsive.png)
+![Responsiveness check image](docs/responsive.png)
 
 (Developer: Alexander Strauch)
 
@@ -448,15 +448,21 @@ erDiagram
 <img src="">
 </details>
 
-
-
 [Back to table of contents](#table-of-contents)
 
 ## Bugs
 
 | Bug                                                                                |Fix                                         |
 | -----------------------------------------------------------------------------------|--------------------------------------------|
-
+| When logging out of the admin dashboard I received an internal server error.       | ![bug image 1](docs/bug1-fix.png)        |
+| Horizontal scrollbar at the bottom when I click on the "Sign up" button            | ![bug image 2](docs/bug2-fix.png)        |
+| When viewed on a mobile viewport in DevTools, the "Welcome to Everpast" and "Create and store your memories for the future" get pushed to the top, the welcome message is not readable anymore respectively disappears.     | ![bug image 3](docs/bug3-fix.png)        |
+| Footer gets pushed down now when viewed on tablet or larger screens.      | ![bug image 4](docs/bug4-fix.png)        |
+| When I view the homepage on a mobile viewport the 2 cards containing the "Get started" and "Already have an account?" get stacked on top of each other without any margin between them. Also when I view the homepage on a tablet or larger screen size the 2 cards have different sizes.      | ![bug image 5](docs/bug5-fix.png)        |
+| When I want to login into my admin dashboard I get an internal server error.     | ![bug image 6](docs/bug6-fix.png)        |
+| When I want to log out of my admin dashboard I get an internal server error.      | ![bug image 7.1](docs/bug7-fix1.png) ![bug image 7.2](docs/bug7-fix2.png)       |
+| I get an internal server error when I provide an email address and password and click on the "Sign up" button on the deployed app. | ![bug image 8](docs/bug8-fix.png)        |
+| I get an internal server error when I provide an email address and password and click on the "Sign up" button on the deployed app.      | ![bug image 9](docs/bug9-fix.png)        |
 
 [Back to table of contents](#table-of-contents)
 
