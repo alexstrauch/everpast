@@ -32,11 +32,13 @@
 8. [Agile tools](#agile-tools)
 9. [Libraries](#libraries)
 10. [Testing](#testing)
-   - [Test results](#test-results)
-   - [HTML validation](#html-validation)
-   - [CSS validation](#css-validation)
-   - [JavaScript validation](#javascript-validation)
-   - [Python validation](#python-validation)
+    - [Authentication testing](#authentication-testing)
+    - [Time capsule testing](#time-capsule-testing)
+    - [Responsiveness testing](#responsiveness-testing)
+    - [HTML validation](#html-validation)
+    - [CSS validation](#css-validation)
+    - [JavaScript validation](#javascript-validation)
+    - [Python validation](#python-validation)
 11. [Bugs](#bugs)
 12. [Deployment](#deployment)
 13. [Forking](#forking)
@@ -394,20 +396,20 @@ erDiagram
 
 ## Testing
 
-#### Authentication testing
+### Authentication testing
 - ✅ User registration with email verification
 - ✅ Login with credentials
 - ✅ Password reset functionality
 - ✅ Social authentication
 
-#### Time capsule testing
+### Time capsule testing
 - ✅ Capsule creation with various content types
 - ✅ Future date setting
 - ✅ Content upload and storage
 - ✅ Capsule locking mechanism
 - ✅ Notification system
 
-#### Responsive design testing
+### Responsiveness testing
 - ✅ Mobile devices (iOS/Android)
 - ✅ Tablets
 - ✅ Desktop browsers (Chrome, Safari, Firefox)
