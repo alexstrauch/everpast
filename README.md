@@ -19,6 +19,8 @@
    - [User expectations](#user-expectations)
    - [User stories](#user-stories)
 3. [Design](#design)
+    - [Colors](#colors)
+    - [Fonts](#fonts)
 4. [Features](#features)
 5. [Future features](#future-features)
 6. [Languages](#languages)
@@ -135,15 +137,74 @@
 
 ## Design
 
+### Colors
+
 <details>
-<summary>(click me)</summary>
-<img src="">
+<summary>Used for Sign up now button, save changes button, view capsule button and add content button (click me)</summary>
+<img src="docs/sign-up-now-button-save-changes-view-capsule-add-content-color.png">
 </details>
 
 <details>
-<summary>(click me)</summary>
-<img src="">
+<summary>Used for the login & edit capsule button (click me)</summary>
+<img src="docs/login-button-edit-capsule-color.png">
 </details>
+
+<details>
+<summary>Used for the logo (click me)</summary>
+<img src="docs/nav-color.png">
+</details>
+
+<details>
+<summary>Used for the account navigation (click me)</summary>
+<img src="docs/nav-account-color.png">
+</details>
+
+<details>
+<summary>Used for the majority of the viewport (click me)</summary>
+<img src="docs/homepage-color.png">
+</details>
+
+<details>
+<summary>Used for the social icons (click me)</summary>
+<img src="docs/social-icons-color.png">
+</details>
+
+<details>
+<summary>Used for the GitHub link (click me)</summary>
+<img src="docs/github-link-color.png">
+</details>
+
+<details>
+<summary>Used for the hover effect on the GitHub link (click me)</summary>
+<img src="docs/github-link-hover-color.png">
+</details>
+
+<details>
+<summary>Used for the lock capsule button(click me)</summary>
+<img src="docs/lock-capsule-color.png">
+</details>
+
+<details>
+<summary>Used for the capsule locked status (click me)</summary>
+<img src="docs/capsule-locked-color.png">
+</details>
+
+<details>
+<summary>Used for the capsule unlocked status (click me)</summary>
+<img src="docs/capsule-unlocked-color.png">
+</details>
+
+<details>
+<summary>Used for the deletion of capsules (click me)</summary>
+<img src="docs/delete-capsule-color.png">
+</details>
+
+<details>
+<summary>Used for the cancellation of edit button (click me)</summary>
+<img src="docs/cancel-edit-color.png">
+</details>
+
+### Fonts
 
 [Back to table of contents](#table-of-contents)
 
@@ -476,7 +537,7 @@ I deployed this Django application on Heroku, taking advantage of its integratio
 8. **Verify deployment**:
    After the deployment was complete, I clicked “View” to open the app and confirm it was functioning properly.
 
-[Go to Table of Contents](#table-of-contents)
+[Back to table of contents](#table-of-contents)
 
 ## Forking
 
