@@ -58,33 +58,39 @@
 
 ### User demographic
 
-- 
+- Primary users: Individuals aged 18-45 who are comfortable with digital technology
+
+- Secondary users: Families wanting to preserve memories
+
+- Tertiary users: Organizations looking to document their history
 
 ### User goals
 
-- 
+- Create and manage digital time capsules
 
-- 
+- Securely store various types of content
 
-- 
+- Set future dates for capsule unlocking
 
-- 
+- Receive notifications when capsules unlock
 
-- 
+- Share memories with future recipients
 
 ### User expectations
 
-- 
+- Clean modern visual appearance which follows best practices
 
-- 
+- Privacy and security: Assurance that their personal memories and messages are stored securely and will only be accessible at the intended time
 
--  
+- Reliability and longevity: Confidence that the platform will remain operational and accessible for the intended duration, possibly spanning years or decades
 
-- 
+- Ease of use: A user-friendly interface for creating, managing, and accessing their time capsules without technical difficulties
 
-- 
+- Media compatibility: Support for a wide range of content types, such as text, images, audio, and video files
 
-- 
+- Notification systems: Timely reminders or updates related to the time capsule’s status and release dates
+
+- Cross-platform accessibility: Access across multiple devices and platforms, ensuring seamless usability
 
 ### User stories
 
