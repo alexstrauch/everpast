@@ -207,7 +207,16 @@
 
 ### Fonts
 
+- **Rock Salt**
+    - Used for: Special text element and branding
+    - Source: Google Fonts
+    - Link: [Google Fonts - Rock Salt](https://fonts.google.com/specimen/Rock+Salt)
+    - Purpose: Adds a handwritten, personal touch to special elements
 
+- **System Font Stack** (via Bootstrap)
+    - Used for: General content and UI elements
+    - Includes: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial
+    - Purpose: Ensures optimal readability and native feel across different operating systems
 
 [Back to table of contents](#table-of-contents)
 
