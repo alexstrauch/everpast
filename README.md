@@ -25,20 +25,23 @@
     - [Existing features](#existing-features)
     - [Future features](#future-features)
 5. [Languages](#languages)
-6. [Technologies](#technologies)
-7. [Agile tools](#agile-tools)
-8. [Libraries](#libraries)
-9. [Testing](#testing)
+6. [Database schema](#database-schema)
+    - [ERD](#erd)
+    - [Database models description](#database-models-description)
+7. [Technologies](#technologies)
+8. [Agile tools](#agile-tools)
+9. [Libraries](#libraries)
+10. [Testing](#testing)
    - [Test results](#test-results)
    - [HTML validation](#html-validation)
    - [CSS validation](#css-validation)
    - [JavaScript validation](#javascript-validation)
    - [Python validation](#python-validation)
-10. [Bugs](#bugs)
-11. [Deployment](#deployment)
-12. [Forking](#forking)
-13. [Credits](#credits)
-14. [Acknowledgements](#acknowledgements)
+11. [Bugs](#bugs)
+12. [Deployment](#deployment)
+13. [Forking](#forking)
+14. [Credits](#credits)
+15. [Acknowledgements](#acknowledgements)
 
 ## Introduction
 
@@ -274,6 +277,66 @@
 - JavaScript
 
 [Back to table of contents](#table-of-contents)
+
+## Database schema
+
+### ERD
+
+```mermaid
+erDiagram
+    User ||--o{ TimeCapsule : creates
+    User {
+        int id PK
+        string email
+        string username
+        string password_hash
+        datetime date_joined
+        boolean is_active
+        boolean is_staff
+    }
+    
+    TimeCapsule ||--o{ CapsuleContent : contains
+    TimeCapsule {
+        int id PK
+        string title
+        text description
+        int creator_id FK
+        datetime created_at
+        datetime unlock_date
+        string status
+        boolean is_public
+    }
+    
+    CapsuleContent {
+        int id PK
+        int capsule_id FK
+        string content_type
+        string file
+        datetime uploaded_at
+        string title
+        text description
+    }
+```
+
+### Database models description
+
+#### User
+- Primary model for authentication and user management
+- Stores essential user information and account status
+- Links to all user-created content and interactions
+
+#### TimeCapsule
+- Core model for storing time capsule information
+- Manages capsule state and access control
+- Links to creator and all associated content
+
+#### CapsuleContent
+- Stores individual pieces of content within capsules
+- Handles different content types (images, videos, documents)
+- Manages metadata and file storage
+
+[Back to table of contents](#table-of-contents)
+
 
 ## Technologies
 
