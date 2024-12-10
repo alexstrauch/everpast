@@ -22,22 +22,23 @@
     - [Colors](#colors)
     - [Fonts](#fonts)
 4. [Features](#features)
-5. [Future features](#future-features)
-6. [Languages](#languages)
-7. [Technologies](#technologies)
-8. [Agile tools](#agile-tools)
-9. [Libraries](#libraries)
-10. [Testing](#testing)
+    - [Existing features](#existing-features)
+    - [Future features](#future-features)
+5. [Languages](#languages)
+6. [Technologies](#technologies)
+7. [Agile tools](#agile-tools)
+8. [Libraries](#libraries)
+9. [Testing](#testing)
    - [Test results](#test-results)
    - [HTML validation](#html-validation)
    - [CSS validation](#css-validation)
    - [JavaScript validation](#javascript-validation)
    - [Python validation](#python-validation)
-11. [Bugs](#bugs)
-12. [Deployment](#deployment)
-13. [Forking](#forking)
-14. [Credits](#credits)
-15. [Acknowledgements](#acknowledgements)
+10. [Bugs](#bugs)
+11. [Deployment](#deployment)
+12. [Forking](#forking)
+13. [Credits](#credits)
+14. [Acknowledgements](#acknowledgements)
 
 ## Introduction
 
@@ -206,162 +207,36 @@
 
 ### Fonts
 
+
+
 [Back to table of contents](#table-of-contents)
 
 ## Features
 
-### 
+### Existing Features
 
-<details>
-<summary>(click me)</summary>
+- User authentication and authorization
+  - Secure user registration and login
+  - Personal dashboard for managing time capsules
+  - Role-based access control
 
-<img src="">
-</details>
+- Time capsule creation
+  - Upload multiple types of content (images, videos, documents)
+  - Set future "unlock" dates
+  - Support for multiple file formats
 
-<details>
-<summary>(click me)</summary>
+- Time capsule management
+  - View all created capsules
+  - Edit capsule details before locking
+  - Countdown timer for locked capsules
 
-<img src="">
-</details>
+- Responsive design
+  - Mobile-first approach
+  - Bootstrap-based UI
+  - Accessible interface
+  - Intuitive user experience
 
-<details>
-<summary>(click me)</summary>
-
-<img src="">
-</details>
-
-<details>
-<summary>(click me)</summary>
-
-<img src="">
-</details>
-
-<details>
-<summary>(click me)</summary>
-
-<img src="">
-</details>
-
-<details>
-<summary>(click me)</summary>
-
-<img src="">
-</details>
-
-<details>
-<summary>(click me)</summary>
-
-<img src="">
-</details>
-
-<details>
-<summary>(click me)</summary>
-
-<img src="">
-</details>
-
-<details>
-<summary>(click me)</summary>
-
-<img src="">
-</details>
-
-<details>
-<summary>(click me)</summary>
-
-<img src="">
-</details>
-
-<details>
-<summary>(click me)</summary>
-
-<img src="">
-</details>
-
-<details>
-<summary>(click me)</summary>
-
-<img src="">
-</details>
-
-<details>
-<summary>(click me)</summary>
-
-<img src="">
-</details>
-
-<details>
-<summary>(click me)</summary>
-
-<img src="">
-</details>
-
-<details>
-<summary>(click me)</summary>
-
-<img src="">
-</details>
-
-<details>
-<summary>(click me)</summary>
-
-<img src="">
-</details>
-
-<details>
-<summary>(click me)</summary>
-
-<img src="">
-</details>
-
-<details>
-<summary>(click me)</summary>
-
-<img src="">
-</details>
-
-<details>
-<summary>(click me)</summary>
-
-<img src="">
-</details>
-
-<details>
-<summary>(click me)</summary>
-
-<img src="">
-</details>
-
-<details>
-<summary>(click me)</summary>
-
-<img src="">
-</details>
-
-<details>
-<summary>(click me)</summary>
-
-<img src="">
-</details>
-
-<details>
-<summary>(click me)</summary>
-
-<img src="">
-</details>
-
-<details>
-<summary>(click me)</summary>
-
-<img src="">
-</details>
-
-
-
-
-[Back to table of contents](#table-of-contents)
-
-## Future features
+### Future features
 
 - Social login integration
 
@@ -408,8 +283,6 @@
 - System font stack via Bootstrap: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
 
 - Adobe color
-
-- WebAIM for accessibility requirements
 
 - W3C for HTML code validation
 
