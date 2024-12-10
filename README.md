@@ -301,11 +301,19 @@
 
 ## Future features
 
-- 
+- Social login integration
 
-- 
+- Advanced capsule filtering
 
-- 
+- Content organization tools
+
+- Sharing settings
+
+- Premium subscriptions
+
+- Real-time collaboration
+
+- Mobile applications
 
 [Back to table of contents](#table-of-contents)
 
