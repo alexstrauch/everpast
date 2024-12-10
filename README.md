@@ -320,27 +320,67 @@
 ## Languages
 
 - Python 3.11
+
 - HTML5
+
 - CSS3
+
 - JavaScript
 
 [Back to table of contents](#table-of-contents)
 
 ## Technologies
 
-- 
+- GitHub for the repository
+
+- Gitpod (IDE)
+
+- git for version control
+
+- Chrome Dev Tools
+
+- Balsamiq for the wireframes
+
+- Google Fonts for the _Rock Salt_ font
+
+- System font stack via Bootstrap: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
+
+- Adobe color
+
+- WebAIM for accessibility requirements
+
+- W3C for HTML code validation
+
+- W3C for CSS code validation
+
+- JShint for JavaScript validation
+
+- CI Python linter for Python validation
+
+- Bootstrap icons
+
+- PostgreSQL for the database
+
+- SendGrid for emails
 
 [Back to table of contents](#table-of-contents)
 
 ## Libraries
 
 - Django 4.2
+
 - Bootstrap 5
+
 - jQuery
+
 - Crispy Forms
+
 - Django Allauth
+
 - Cloudinary
+
 - WhiteNoise
+
 - Gunicorn
 
 [Back to table of contents](#table-of-contents)
