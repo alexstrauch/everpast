@@ -96,27 +96,39 @@
 
 #### User
 
-- 
+- As a new user, I want to create an account so that I can start creating time capsules
 
-- 
+- As a registered user, I want to manage my profile so that I can update my information
 
-- 
+- As a user, I want a robust email verification system so that my account is secure
 
-- 
+- As a user, I want a secure password reset system so that I can recover my account
 
-- 
+- As a user, I want clear feedback on my actions so I know what's happening
+
+- As a user, I want to create a new time capsule so that I can store my memories
+
+- As a user, I want to view all my time capsules so that I can manage them
+
+- As a user, I want to upload different types of content so that I can preserve various memories
+
+- As a user, I want my capsules to be secure so that only I can access them
+
+- As a user, I want an intuitive and responsive interface that works well on all devices
 
 #### Site owner
 
-- 
+- As a site owner, I want to monitor user activity so that I can ensure appropriate platform usage
 
-- 
+- As a site owner, I want to manage user accounts so that I can maintain platform security
 
-- 
+- As a site owner, I want to manage storage resources so that I can optimize platform performance
 
-- 
+- As a site owner, I want to maintain platform security so that user data remains protected
 
-- 
+- As a site owner, I want to monitor platform performance so that I can ensure reliable service for all users
+
+- As a site owner, I want to implement content moderation tools to ensure that uploaded content adheres to community guidelines and legal standards
 
 [Back to table of contents](#table-of-contents)
 
