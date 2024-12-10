@@ -581,15 +581,20 @@ If you'd like to fork this repository and run it locally, follow these steps:
 
 ## Credits
 
-- 
+- [Django 4.2](https://www.djangoproject.com/)
 
-- 
+    - Source: Django Software Foundation (DSF)
+	- Description: Django is a high-level Python web framework that encourages rapid development and clean, pragmatic design.
+	- Acknowledgment: “Django 4.2, developed by the Django Software Foundation, provided the core framework for building and managing my web application.”
 
-- 
+- [Bootstrap 5](https://getbootstrap.com/)
 
-- 
+    - Source: Bootstrap
+	- Description: A popular front-end CSS framework that simplifies responsive and mobile-first web design.
+	- Acknowledgment: “Bootstrap 5, maintained by the Bootstrap community, enabled the creation of a responsive and visually appealing user interface for my project.”
 
-- 
+- the almighty Google
+
 
 [Back to table of contents](#table-of-contents)
 
