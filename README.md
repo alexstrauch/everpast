@@ -358,7 +358,7 @@
 <details>
 <summary>W3C for HTML code validation (click me)</summary>
 
-<img src="">
+<img src="docs/html-validation.png">
 </details>
 
 ### CSS validation
@@ -366,7 +366,7 @@
 <details>
 <summary>W3C for CSS code validation (click me)</summary>
 
-<img src="">
+<img src="docs/css-validation.png">
 </details>
 
 ### JavaScript validation
@@ -374,7 +374,7 @@
 <details>
 <summary>JShint for JavaScript validation (click me)</summary>
 
-<img src="">
+<img src="docs/javascript-validation.png">
 </details>
 
 ### Python validation
