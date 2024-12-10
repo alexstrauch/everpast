@@ -394,8 +394,6 @@ erDiagram
 
 ## Testing
 
-### Manual testing
-
 #### Authentication testing
 - ✅ User registration with email verification
 - ✅ Login with credentials
