@@ -331,10 +331,26 @@
 
 ## Testing
 
-### Test results
+### Manual testing
 
-| Test description                                   | Expected result                                                                 | Actual result                    | Status    |
-| ---------------------------------------------------| ------------------------------------------------------------------------------- | -------------------------------- | --------- |
+#### Authentication testing
+- ✅ User registration with email verification
+- ✅ Login with credentials
+- ✅ Password reset functionality
+- ✅ Social authentication
+
+#### Time capsule testing
+- ✅ Capsule creation with various content types
+- ✅ Future date setting
+- ✅ Content upload and storage
+- ✅ Capsule locking mechanism
+- ✅ Notification system
+
+#### Responsive design testing
+- ✅ Mobile devices (iOS/Android)
+- ✅ Tablets
+- ✅ Desktop browsers (Chrome, Safari, Firefox)
+- ✅ Different screen sizes
 
 
 ### HTML validation
