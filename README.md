@@ -21,6 +21,7 @@
 3. [Design](#design)
     - [Colors](#colors)
     - [Fonts](#fonts)
+    - [Wireframes](#wireframes)
 4. [Features](#features)
     - [Existing features](#existing-features)
     - [Future features](#future-features)
@@ -224,6 +225,23 @@
     - Includes: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial
     - Purpose: Ensures optimal readability and native feel across different operating systems
 
+### Wireframes
+
+<details>
+<summary>Desktop (click me)</summary>
+<img src="docs/everpast-home-desktop.png">
+</details>
+
+<details>
+<summary>Tablet (click me)</summary>
+<img src="docs/everpast-home-iPad.png">
+</details>
+
+<details>
+<summary>Mobile (click me)</summary>
+<img src="docs/everpast-home-iPhone.png">
+</details>
+
 [Back to table of contents](#table-of-contents)
 
 ## Features
@@ -408,6 +426,7 @@ erDiagram
 - ✅ Future date setting
 - ✅ Content upload and storage
 - ✅ Capsule locking / unlocking mechanism
+- ✅ Edit & delete capsules
 - ✅ Notification system
 
 ### Responsiveness testing
