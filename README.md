@@ -35,6 +35,7 @@
     - [Authentication testing](#authentication-testing)
     - [Time capsule testing](#time-capsule-testing)
     - [Responsiveness testing](#responsiveness-testing)
+    - [Lighthouse testing](#lighthouse-testing)
     - [HTML validation](#html-validation)
     - [CSS validation](#css-validation)
     - [JavaScript validation](#javascript-validation)
@@ -415,6 +416,25 @@ erDiagram
 - ✅ Desktop browsers (Chrome, Safari, Firefox)
 - ✅ Different screen sizes
 
+### Lighthouse testing
+
+<details>
+<summary>Lighthouse testing for desktop (click me)</summary>
+
+<img src="docs/lighthouse-desktop.png">
+</details>
+
+<details>
+<summary>Lighthouse testing for mobile (click me)</summary>
+
+<img src="docs/lighthouse-mobile1.png">
+</details>
+
+<details>
+<summary>Lighthouse testing for mobile (click me)</summary>
+
+<img src="docs/lighthouse-mobile2.png">
+</details>
 
 ### HTML validation
 
