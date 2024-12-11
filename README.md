@@ -391,6 +391,8 @@ erDiagram
 
 - SendGrid for emails
 
+- Heroku for deployment
+
 [Back to table of contents](#table-of-contents)
 
 ## Libraries
@@ -622,13 +624,25 @@ If you'd like to fork this repository and run it locally, follow these steps:
 
 - [Django 4.2](https://www.djangoproject.com/)
 
-    - Source: Django Software Foundation (DSF)
+   - Source: Django Software Foundation (DSF)
 	- Description: Django is a high-level Python web framework that encourages rapid development and clean, pragmatic design.
 	- Acknowledgment: “Django 4.2, developed by the Django Software Foundation, provided the core framework for building and managing my web application.”
 
+- [How to Start a Production-Ready Django Project](https://simpleisbetterthancomplex.com/tutorial/2021/06/27/how-to-start-a-production-ready-django-project.html)
+
+   - Author: Vitor Freitas
+
+- [What You Should Know About The Django User Model](https://simpleisbetterthancomplex.com/article/2021/07/08/what-you-should-know-about-the-django-user-model.html)
+
+   - Author: Vitor Freitas
+
+- [Heroku’s step-by-step Django deployment guide](https://devcenter.heroku.com/categories/python-support)
+
+- [Crispy forms docs](https://django-crispy-forms.readthedocs.io/en/latest/)
+
 - [Bootstrap 5](https://getbootstrap.com/)
 
-    - Source: Bootstrap
+   - Source: Bootstrap
 	- Description: A popular front-end CSS framework that simplifies responsive and mobile-first web design.
 	- Acknowledgment: “Bootstrap 5, maintained by the Bootstrap community, enabled the creation of a responsive and visually appealing user interface for my project.”
 
