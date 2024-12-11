@@ -406,7 +406,7 @@ erDiagram
 - ✅ Capsule creation with various content types
 - ✅ Future date setting
 - ✅ Content upload and storage
-- ✅ Capsule locking mechanism
+- ✅ Capsule locking / unlocking mechanism
 - ✅ Notification system
 
 ### Responsiveness testing
